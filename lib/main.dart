@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Application name
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Hello World',
       // Application theme data, you can set the colors for the application as
       // you want
@@ -16,14 +17,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'INNOVASPORT'),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  const MyHomePage({super.key, required this.title});  
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +34,71 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
+        child: ListView(children: [
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu correo",
+                  labelText: "Email",
+                ),
+              )),
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu apellido",
+                  labelText: "Apellido paterno",
+                ),
+              )),
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu apellido materno",
+                  labelText: "Apellido materno",
+                ),
+              )),
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu edad",
+                  labelText: "Edad",
+                ),
+              )),
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu Escuela",
+                  labelText: "Escolaridad",
+                ),
+              )),
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu direccion",
+                  labelText: "Direccion",
+                ),
+              )),
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Escribe tu CP",
+                  labelText: "CP",
+                ),
+              ))
+        ]),
       ),
     );
   }
